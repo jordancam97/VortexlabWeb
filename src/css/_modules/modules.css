@@ -1,0 +1,17 @@
+.contenedor{
+    align-items: center;
+    justify-content: center;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+}
+.contenedor__titulo{ 
+    filter:brightness(0.9)
+}
+
+.titulo__txt{
+
+    color:white;
+    text-align: center;
+}
+

@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@600&display=swap'); 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ 
+body {
+  background:linear-gradient(45deg, red, rgba(0, 133, 255, 1));
+  font-family: 'Fredoka', sans-serif;
+} 
+#root {
+  justify-content: center;
+}
+ 
+a {
+  text-decoration: none;
+}
+ 
+a:hover {
+  text-decoration: underline;
+
+}

@@ -1,31 +1,41 @@
+.onePage__logo--margin {
+  margin-left: 14vh;
+  --xyz-opacity: 0.5;
+}
 .onePage__gradient--marginOne {
-  margin-left: 1vh;
-  margin-top: -3vh;
+  margin-left: -2vh;
+  margin-top: 9vh;
   position: absolute;
+  transition: ease-out;
+  transition-duration: 10s;
+  /* opacity: 1; */
 }
 
 .onePage__gradient--marginTwo {
-  margin-left: 105vh;
-  margin-top: -10vh;
+  margin-left: 100vh;
+  margin-top: 0vh;
   position: absolute;
 }
 
 .onePage__gradient--marginThree {
-  margin-left: 25vh;
-  margin-top: 35vh;
+  margin-left: 20vh;
+  margin-top: 40vh;
   position: absolute;
 }
 
 .onePage__gradient--marginFour {
-  margin-left: 150vh;
-  margin-top: 55vh;
-  box-sizing: content-box;
+  margin-left: 130vh;
+  margin-top: 65vh;
   position: absolute;
 }
 
 .onePage__gradient--sizeTwentyseven {
   width: 27vh;
   height: 27vh;
+}
+
+.onePage__Header--spacing {
+  margin-left: 5vh;
 }
 
 .onePage__gradient--color {
@@ -47,7 +57,6 @@
 
 .onePage__separator--color {
   background: linear-gradient(90deg, #214fb3, #0fb4df, #01feff);
-  margin-top: 40vh;
 }
 
 .twoPage__container--display {
@@ -142,4 +151,86 @@
     #3744fc
   );
   margin-top: 61vh;
+}
+
+.sevenPageContainer__subTitle--top {
+  margin-top: 5vh;
+  margin-bottom: 15vh;
+}
+
+.eightPageContainer__subTitle--top {
+  margin-top: 5vh;
+  /* margin-bottom: 15vh; */
+}
+
+.eightPageContainer__gradient--ubication {
+  margin-left: 18vh;
+  margin-top: -35vh;
+}
+
+.eightPageContainer__gradient--ubicationTwo {
+  margin-left: 85vh;
+  margin-top: -40vh;
+}
+
+.eightPage__separator--color {
+  background: linear-gradient(
+    90deg,
+    #3744fc,
+    #145cfc,
+    #1074fc,
+    #0998fc,
+    #04b0fc,
+    #30d4d4,
+    #04e4cc,
+    #04f3bc
+  );
+  margin-top: -11vh;
+  z-index: +2;
+}
+
+.ninePageContainer__right--bottom {
+  margin-bottom: 5vh;
+}
+
+.ninePageContainer__gradient--ubication {
+  margin-left: 0vh;
+  margin-top: -20vh;
+}
+
+.tenPageContainer__left--top {
+  margin-top: 5vh;
+}
+
+.tenPageContainer__gradient--ubication {
+  margin-left: 140vh;
+  margin-top: -40vh;
+}
+
+.elevenPageContainer__left--top {
+  margin-top: 5vh;
+}
+
+.elevenPageContainer__gradient--ubication {
+  margin-top: -30vh;
+  margin-right: 10vh;
+}
+
+.twelvePageContainer__right--bottom {
+  margin-bottom: 5vh;
+}
+
+.twelvePageContainerSeparator--color {
+  background: linear-gradient(
+    90deg,
+    #3744fc,
+    #145cfc,
+    #1074fc,
+    #0998fc,
+    #04b0fc,
+    #30d4d4,
+    #04e4cc,
+    #04f3bc
+  );
+  margin-top: 6vh;
 }

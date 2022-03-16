@@ -1,0 +1,5 @@
+anime({
+    targets: '.duration-demo .el',
+    translateX: 250,
+    duration: 3000
+  });

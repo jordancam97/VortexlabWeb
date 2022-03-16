@@ -17,8 +17,16 @@
   font-size: 2vh;
 }
 
+.fontSizeTwoFive {
+  font-size: 2.5vh;
+}
+
 .fontSizeTwoEight {
   font-size: 2.7vh;
+}
+
+.fontSizeThree {
+  font-size: 3vh;
 }
 
 .fontSizeFour {
@@ -65,8 +73,14 @@
 
 .onePage__logo {
   width: 40vh;
-  margin-left: 15vh;
-  margin-top: 3vh;
+  margin-top: 2vh;
+}
+
+.onePage__Header {
+  margin-left: 100vh;
+  margin-top: -7.3vh;
+  width: 80vh;
+  display: flex;
 }
 
 .onePage__gradient {
@@ -80,28 +94,35 @@
   );
   border-radius: 100%;
   z-index: -1;
+  /* opacity: 0; */
 }
 
 .onePage__txtSi {
   font-weight: bold;
   margin-left: 15vh;
-  margin-top: 15vh;
+  margin-top: 30vh;
   width: 115vh;
   z-index: +1;
+  padding-right: 15vh;
 }
+/* metiendo animación */
+
+/* metiendo animación */
 
 .onePage__mesh {
   width: 80vh;
   height: 80vh;
   margin-left: 123vh;
   position: absolute;
-  top: -7vh;
-  object-position: 20vh; /*recorta la margen*/
+  margin-top: -55vh;
+  object-position: 7vh;
+  /*recorta la margen*/
 }
 
 .onePage__separator {
   width: 100%;
   height: 5vh;
+  margin-top: 28vh;
 }
 
 .twoPage__container {
@@ -114,9 +135,8 @@
 .twoPage__flower {
   width: 80vh;
   height: 80vh;
-  position: absolute;
-  top: 150vh;
-  left: -15vh;
+  margin-top: -25vh;
+  margin-left: -10vh;
   z-index: +1;
 }
 
@@ -124,13 +144,13 @@
   width: 80vh;
   height: 80vh;
   position: relative;
-  top: -40vh;
+  top: -80vh;
   z-index: -1;
-  left: -5vh;
+  left: -15vh;
 }
 
 .threePage__container {
-  margin-top: -50vh;
+  margin-top: -105vh;
 }
 
 .threePage__containerTitleNe {
@@ -193,6 +213,8 @@
   margin-top: 5vh;
   z-index: +1;
   position: absolute;
+  width: 115vh;
+  height: 42vh;
 }
 
 .fourPage__containerListPoint {
@@ -267,9 +289,231 @@
   height: 5vh;
 }
 
-.seven__container {
-  height: 32vh;
-  margin-top: 65vh;
-  margin-left: 22vh;
-  width: 5vh;
+.sevenPageContainer {
+  margin-top: -5vh;
+}
+
+.sevenPageContainer__title {
+  margin-top: 15vh;
+  margin-left: 15vh;
+}
+
+.sevenPageContainer_veticalmesh {
+  margin-top: -19vh;
+}
+.sevenPageContainer_veticalmeshSize {
+  height: auto;
+  width: auto;
+  margin-left: 145vh;
+}
+
+.sevenPageContainer__subTitle {
+  margin-top: -200vh;
+  margin-left: 15vh;
+}
+
+.eightPageContainer {
+  margin-top: 35vh;
+}
+
+.eightPageContainer__title {
+  margin-top: 15vh;
+  margin-left: 15vh;
+}
+
+.eightPageContainer__titleTwo {
+  margin-top: 5vh;
+  margin-left: 15vh;
+}
+
+.eightPageContainer__gradientBox {
+  width: 90vh;
+  height: 8vh;
+  border-width: 2px;
+  border-style: solid;
+  margin-top: 2vh;
+  border-image: linear-gradient(
+      to right,
+      #04f3bc,
+      #04e4cc,
+      #30d4d4,
+      #04b0fc,
+      #0998fc,
+      #1074fc,
+      #145cfc,
+      #3744fc
+    )
+    1;
+}
+
+.eightPageContainer__text {
+  text-align: center;
+  margin-top: 2vh;
+}
+
+.eightPageContainer__imageRings {
+  width: 30vh;
+  height: 30vh;
+  margin-top: 15vh;
+  margin-left: 25vh;
+  z-index: +1;
+}
+
+.eightPageContainer__gradient {
+  width: 45vh;
+  height: 45vh;
+  margin: 2em auto;
+  background: radial-gradient(
+    circle farthest-side at center center,
+    #0d354e,
+    #060622
+  );
+  border-radius: 100%;
+  z-index: -1;
+}
+
+.eightPageContainer__imageParticle {
+  width: 30vh;
+  height: 30vh;
+  margin-top: -55vh;
+  margin-left: 35vh;
+  z-index: +2;
+}
+
+.eightPage__separator {
+  width: 100%;
+  height: 5vh;
+}
+
+.ninePageContainer {
+  margin-top: 10vh;
+}
+
+.ninePageContainer__right {
+  margin-right: 30vh;
+  text-align: right;
+}
+
+.ninePageContainer__gradient {
+  width: 45vh;
+  height: 45vh;
+  margin: 2em auto;
+  background: radial-gradient(
+    circle farthest-side at center center,
+    #0d354e,
+    #060622
+  );
+  border-radius: 100%;
+  z-index: -1;
+}
+
+.ninePageContainer__invertedmesh {
+  height: 50vh;
+  width: 50vh;
+  margin-left: 15vh;
+  margin-top: -60vh;
+}
+
+.tenPageContainer {
+  margin-top: -5vh;
+}
+
+.tenPageContainer__left {
+  margin-left: 15vh;
+}
+
+.tenPageContainer__particle {
+  height: 70vh;
+  width: 70vh;
+  margin-top: -220vh;
+  margin-left: 120vh;
+}
+
+.tenPageContainer__gradient {
+  width: 45vh;
+  height: 45vh;
+  margin: 2em auto;
+  background: radial-gradient(
+    circle farthest-side at center center,
+    #0d354e,
+    #060622
+  );
+  border-radius: 100%;
+  z-index: -1;
+}
+
+.elevenPageContainer__left {
+  margin-left: 15vh;
+}
+
+.elevenPageContainerFlatmesh {
+  margin-left: 15vh;
+}
+
+.elevenPageContainerFlatmesh__size {
+  height: 120vh;
+  width: 120vh;
+  margin-top: 8vh;
+}
+
+.elevenPageContainer__waveshorizontal {
+  margin-top: -130vh;
+  margin-left: 150vh;
+  /* z-index: +1; */
+}
+
+.elevenPageContainer__waveshorizontalSize {
+  height: 30vh;
+  width: 30vh;
+}
+
+.elevenPageContainer__gradient {
+  width: 45vh;
+  height: 45vh;
+  margin: 2em auto;
+  background: radial-gradient(
+    circle farthest-side at center center,
+    #0d354e,
+    #060622
+  );
+  border-radius: 100%;
+  z-index: -1;
+}
+
+.ninePageContainer {
+  margin-top: 10vh;
+}
+
+.twelvePageContainer {
+  margin-top: 45vh;
+}
+.twelvePageContainer__right {
+  margin-right: 30vh;
+  text-align: right;
+}
+
+.twelvePageContainerSeparator {
+  width: 100%;
+  height: 5vh;
+}
+
+.thirteenPage {
+  width: 30vh;
+  display: block;
+  margin: auto;
+}
+
+.thirteenPage__logoFooter {
+  width: 20vh;
+}
+
+.thirteenPage__logoLinkedin {
+  width: 20vh;
+  margin-left: 20vh;
+  margin-top: -7.6vh;
+}
+
+.thirteenPage__gmail {
+  margin-left: -49vh;
+  margin-top: -7.5vh;
 }

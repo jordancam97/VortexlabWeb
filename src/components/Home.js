@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import logoVortex from './../assets/img/Vortex.png'
 import mesh from './../assets/img/malla.png'
 import waves from './../assets/img/waves.png'
@@ -6,31 +6,64 @@ import balls from './../assets/img/balls.png'
 import point from './../assets/img/point.png'
 import flatmesh from './../assets/img/mallaPlana.png'
 import Base from './../assets/img/3D-Base.png'
+import veticalmesh from './../assets/img/mallaVertical.png'
+import anillos from './../assets/img/anillos.png'
+import particleTwo from './../assets/img/ParticleDos.png'
+import invertedmesh from './../assets/img/mallaInvertida.png'
+import particle from './../assets/img/particle.png'
+import waveshorizontal from './../assets/img/WavesHorizontal.png'
+import vortexfooter from './../assets/img/Vortex-Footer.png'
+import logolinkedin from './../assets/img/Logo-Linkedin.png'
 
- 
+// Animation
+
+import {TweenMax, TweenLite, Power0, Power1, Power2, Power3, Back, Bounce, Elastic, SteppedEase, Circ, Expo, Sine} from 'gsap';
+
+// const [state, setState] = useState(false);
+
+// const handleExpand = () => {
+//     TweenMax.to(point, .3, {width: 200, height: 200, ease: Bounce.easeOut})
+//     setState(true)
+// }
 
 const Home = () => {
+    let firstP = useRef(null)
+
+    useEffect(() => {
+        TweenMax.staggerFrom(point, .3, {opacity: 0, x: 250, ease: Bounce.easeInOut, delay: .4})
+        TweenMax.staggerFrom(firstP, .3, {opacity: 0, x: 100, ease: Sine.easeIn, delay: .4})
+      }, []);
+    
     return ( 
         <>
             {/* <ParallaxProvider > */}
                 <div className='principal'>
                     <div className='onePage'>
                         {/* Panel izquierdo 1ra screen*/}
-                        <div className='flexDirectionRow'>
-                            <img className='onePage__logo' src={logoVortex} alt="logo"/>
+                        <div className='onePage__logo '>
+                            <img className='onePage__logo onePage__logo--margin' src={logoVortex} alt="logo"/>
                         </div>
 
+                            <div className='onePage__Header'>
+                                <a href='#threePage'><p className='onePage__Header--spacing fontSizeTwo textColorWhite'>Nuestra Empresa</p></a>
+                                <a href='#sevenPage'><p className='onePage__Header--spacing fontSizeTwo textColorWhite'>Nuestros Servicios</p></a>
+                                <a href='#twelvePage'><p className='onePage__Header--spacing fontSizeTwo textColorWhite'>Algunos Conceptos</p></a>
+                                <a href='#thirteenPage'><p className='onePage__Header--spacing fontSizeTwo textColorWhite'>Contacto</p></a>
+                                    {/* {anime} */}
+                            </div>
+                        
+                        
                         <div className='onePage__gradient onePage__gradient--marginOne'/>
                         <div className='onePage__gradient onePage__gradient--marginTwo'/>
                         <div className='onePage__gradient onePage__gradient--marginThree'/>
                         <div className='onePage__gradient onePage__gradient--sizeTwentyseven onePage__gradient--marginFour'/>
                        
-                        <p className=" onePage__txtSi textColorWhite fontSizeSix">
-                            Si usted no se adapta a las nuevas tecnologías, como la de la cadena de bloques y criptomonedas,
-                            su empresa tendrá un futuro complicado.
+                        <p className=" onePage__txtSi textColorWhite fontSizeSix" ref={el => firstP = el }>
+                            Es hora de adaptar su empresa a las nuevas tecnologías blockchain, web 3.0, defi, fintech, metaverso, A.I  y criptomonedas.
                         </p>
                         
                         {/* Panel derecho 1ra screen*/}
+                        
                         <img className="onePage__mesh" src={mesh} alt="mesh"/>
                         {/* separador */}
                         <div className='onePage__separator onePage__separator--color'></div>
@@ -66,7 +99,7 @@ const Home = () => {
                     </div>
 
                     
-                    <div className='threePage'>
+                    <div className='threePage' id='threePage'>
                         <div className='threePage__gradient threePage__gradientMini--color '> </div>
                         <div className='threePage__container'>
                            <h1 className="threePage__containerTitleNe textColorCian fontSizeTen fontWeightBold ">Nuestra Empresa.</h1>
@@ -83,14 +116,15 @@ const Home = () => {
                         <div className='threePage__gradient threePage__gradient--color '> </div>
                     </div>
                   
-                     <div className='fourPage'>
+
+                    <div className='fourPage'>
                         <div className='fourPage__container'>
                             <h1 className=" textColorCian fontSizeSeven fontWeightBold fourPage__containerTituloPo ">¿Por qué somos importantes<br/>&nbsp;&nbsp;para su empresa?</h1>
                         </div>
                          <div className='fourPage__containerParagraph'>
                             <p className=" textColorWhite fontSizeTwoEight fontWeightLighter ">Somos importantes porque:</p>
                         </div>
-                        <div className='fourPage__containerList'>
+                        <div className='fourPage__containerList' ref={el => point = el }>
                             <img className='fourPage__containerListPoint' src={point} alt="circle"/>
                             <p className='fourPage__containerListPoint--margin textColorWhite fontSizeTwoEight fontWeightLighter'>Podemos hacer que su empresa se adapte a las nuevas tecnologías, cuyos cambios se revierten en menor tiempo, menor costo, mas seguridad y mayor confiabilidad 
                                 de su servicio.
@@ -113,11 +147,9 @@ const Home = () => {
                             <p className='fourPage__containerListPoint--margin textColorWhite fontSizeTwoEight fontWeightLighter'>Usted puede visitarnos en nuestras oficinas y verificar el paso a paso de su proceso.</p>
                         </div>
                         <div className='fourPage__flatmesh'>
-                            <img className='fourPage__flatmesh--size' src={flatmesh}></img>
+                            <img className='fourPage__flatmesh--size' src={flatmesh} alt='flatmesh'></img>
                         </div> 
                     </div>
-                    
-
 
                     
                     <div className='fivePage '>
@@ -155,13 +187,10 @@ const Home = () => {
                             <img className='fivePage__containerListPoint' src={point} alt="circle"/>
                             <p className='fivePage__containerListPointP fivePage__containerListPointP--rightSix textColorWhite fontSizeTwoEight fontWeightLighter'>Es un artista y desea comercializar su arte por usted mismo, sin intermediarios.</p>
                         </div>
-                    </div>
+                    </div> 
 
                      {/* 6ta screnn */}
                     <div className='sixPage'>
-                        <div className='sixPage__elipse'>
-                            <img></img>
-                        </div>
                         <div className='sixPage__containerList'>
                             <img className='sixPage__containerListPoint' src={point} alt="circle"/>
                             <p className='sixPage__containerListPoint--margin textColorWhite fontSizeTwoEight fontWeightLighter'>Quiere comercializar un producto o un servicio de una manera más agil.
@@ -196,17 +225,157 @@ const Home = () => {
                             <p className='sixPage__containerListPoint--margin textColorWhite fontSizeTwoEight fontWeightLighter'>Generar trazabilidad para su organización.</p>
                             <br/><br/>
                             <div className='sixPage__base'>
-                                <img className='sixPage__base' src={Base}></img>
+                                <img className='sixPage__base' src={Base}  alt='base'></img>
                             </div>
                         </div>
                         <div className='sixPage__separator sixPage__separator--color'></div>
                     </div>
-
-                    {/* <div className='sevenPage'>
-                        <div className='sevenPage__containerList'>
-                            <h1>Nuestro servicios en Cadena de Bloques</h1>
+                    
+                    <div className='sevenPage' id='sevenPage'>
+                        <div className='sevenPageContainer'>
+                          <div className='sevenPageContainer__title'>
+                            <h1 className='textColorWhite fontSizeFive fontWeightBold'>Nuestros servicios en Cadena de Bloques</h1>
                         </div>
-                    </div> */}
+                        <div className='sevenPageContainer_veticalmesh '>
+                            <img className='sevenPageContainer_veticalmeshSize' src={veticalmesh}  alt='verticalmesh'></img>
+                        </div>
+                        <div className='sevenPageContainer__subTitle'>
+                            <h1 className='textColorCian fontSizeFour fontWeightBold'>Desarrollo para Metaverso</h1><br/><br/>
+                            <p className='sevenPageContainer__subTitle--top textColorWhite fontSizeTwoEight fontWeightLighter'>Es un ambiente virtual, donde los usuarios pueden trabajar, jugar y vivir todo tipo de experiencias.<br/>
+                                Usted puede tener actividades comerciales en oficinas, centros comerciales y casas. Esta nueva <br/> economía implica el uso de monedas virtuales.<br/><br/>
+                                Desarrollos para monetización en el concepto de Metaverso, definido por el fundador de <br/> Facebook, moneda, pagos, compras y contratos inteligentes en cadena de bloques.
+                            </p>
+                            <h1 className='textColorCian fontSizeFour fontWeightBold'>Consultoría y auditoría de proyectos</h1><br/>
+                            <p className='sevenPageContainer__subTitle--top textColorWhite fontSizeTwoEight fontWeightLighter'>No importa si usted no ha contratado con nosotros, permítanos auditar su desarrollo como una <br/> 
+                                segunda opinión, que le permita tener confianza en su proyecto antes de ser lanzado</p>
+                        </div>  
+                        </div>
+                    </div>
+
+
+                    <div className='eightPage'>
+                        <div className='eightPageContainer'>
+                            <div className='eightPageContainer__title'>
+                                <h1 className='textColorCian fontSizeFour fontWeightBold'>Desarrollos Propios, Públicos y Privados.</h1>
+                                <p className='eightPageContainer__subTitle--top textColorWhite fontSizeTwoEight fontWeightLighter'>Su proyecto desarrollado en las más populares plataformas: Solana, Ethereum y BNB entre otras.</p>
+                            </div>
+                            <div className='eightPageContainer__titleTwo'>
+                                <h1 className='textColorCian fontSizeFour fontWeightBold'>Lenguajes usados:</h1>
+                                <div className='eightPageContainer__gradientBox'>
+                                    <p className='eightPageContainer__text textColorWhite fontSizeTwoEight'>Solidity, Rust, C, Go, Truffle, TypeScript, JavaScript, Python, MQL5 y PHP.</p>
+                                </div>
+                                <p className='eightPageContainer__subTitle--top textColorCian fontSizeTwoFive fontWeightLighter'>Mantiene la privacidad de la información y con la seguridad que garantiza la cadena de bloques</p>
+                            </div>
+                            <img className='eightPageContainer__imageRings' src={anillos} alt='Rings'></img>
+                            <img className='eightPageContainer__imageParticle' src={particleTwo} alt='particleTwo'></img>
+                            <div className='eightPageContainer__gradient eightPageContainer__gradient--ubication'></div>
+                            <div className='eightPageContainer__gradient eightPageContainer__gradient--ubicationTwo'></div>   
+                        </div>
+                        <div className='eightPage__separator eightPage__separator--color'></div>
+                    </div>
+
+
+                    <div className='ninePage'>
+                        <div className='ninePageContainer'>
+                            <div className='ninePageContainer__right'>
+                                <h1 className='ninePageContainer__right--bottom textColorCian fontSizeThree fontWeightBold'>Desarrollo de Pruebas de Concepto (POC)</h1>
+                                <p className='ninePageContainer__right--bottom textColorWhite fontSizeTwoEight fontWeightLighter'>Le permite hacer uso de la tecnología y probarla hasta que realmente se adapte<br/> a sus necesidades y cumpla con todos los requisitos.</p>  
+                            </div>
+                            <div className='ninePageContainer__right'>
+                                <h1 className='ninePageContainer__right--bottom textColorCian fontSizeThree fontWeightBold'>Billeteras Virtuales</h1>
+                                <p className='ninePageContainer__right--bottom textColorWhite fontSizeTwoEight fontWeightLighter'>Para que sus clientes sientan más tranquilidad y flexibilidad que con sus actuales Apps.<br/>Nuestras Apps descentralizadas DApps, son muchas más seguras y fáciles de usar.</p>  
+                            </div>
+                            <div className='ninePageContainer__right'>
+                                <h1 className='ninePageContainer__right--bottom textColorCian fontSizeThree fontWeightBold'>Contratos Inteligentes</h1>
+                                <p className='ninePageContainer__right--bottom textColorWhite fontSizeTwoEight fontWeightLighter'>Es un contrato virtual que puede ser firmado electrónicamente, sin necesidad de<br/>implicar a una tercera entidad. Solo hasta que se cumplan los términos y condiciones,<br/>previamente definidos por usted, se podrán hacer desembolsos o pagos.</p>  
+                            </div>
+                            <div className='ninePageContainer__right'>
+                                <h1 className='ninePageContainer__right--bottom textColorCian fontSizeThree fontWeightBold'>Firma Electronica</h1>
+                                <p className='textColorWhite fontSizeTwoEight fontWeightLighter'>Para que el contenido de sus documentos no pueda ser adulterados y siempre<br/>permanezcan con la originalidad del autor.</p>  
+                            </div>
+                            <img className='ninePageContainer__invertedmesh' src={invertedmesh}></img>
+                            <div className='ninePageContainer__gradient ninePageContainer__gradient--ubication'></div>
+                        </div>
+                    </div>
+
+
+                    <div className='tenPage'>
+                        <div className='tenPageContainer'>
+                            <div className='tenPageContainer__left'>
+                                <h1 className='tenPageContainer__left--top textColorCian fontSizeFour fontWeightBold'>Juegos</h1>
+                                <p className='tenPageContainer__left--top textColorWhite fontSizeTwoEight fontWeightLighter'>Desarrollo de juegos y apuestas en cadena de bloques. Los usuarios interactúan<br/>en tiempo real, lo que garantiza la mas real, confiable y transparente experiencia.<br/>La aplicación descentralizada (DApp) incluye un contrato inteligente.</p>  
+                            </div>
+                            <div className='tenPageContainer__left'>
+                                <h1 className='tenPageContainer__left--top textColorCian fontSizeFour fontWeightBold'>Finanzas Descentralizadas (DeFi)</h1>
+                                <p className='tenPageContainer__left--top textColorWhite fontSizeTwoEight fontWeightLighter'>Le ayudamos a transformar sus servicios financieros tradicionales en<br/>aplicaciones descentralizadas (DApps) equivalentes, encriptadas, sin riesgo.<br/>Mejoran la experiencia de su cliente y la rentabilidad y confiabilidad de su servicio.<br/><br/>
+                                    Contratos inteligentes, prestamos, fondos, inversiones, validación de<br/> transacciones (staking), seguros de vida, activos reales, criptoactivos (NFT), Billetera virtual.<br/> Tarejetas de crédito, Débito, puntos de recompensa, etc. 
+                                </p>  
+                            </div>
+                            <div className='tenPageContainer__left'>
+                                <h1 className='tenPageContainer__left--top textColorCian fontSizeFour fontWeightBold'>Criptomonedas y Tokens</h1>
+                                <p className='tenPageContainer__left--top textColorWhite fontSizeTwoEight fontWeightLighter'>Usted puede desarrollar sus criptomonedas y usarla con un propósito legal definido.<br/>El desarrollo de criptomonedas, no necesariamente fluctuantes ni valiosas,<br/> puede ser aplicable a cualquier campo de actividad humana.<br/><br/>
+                                    Scripts para funciones de intercambio con otras monedas y su posible monetización.
+                                </p>  
+                            </div>
+                            <img className='tenPageContainer__particle' src={particle}></img>
+                            <div className='tenPageContainer__gradient tenPageContainer__gradient--ubication'></div>
+                        </div>
+                    </div>
+
+
+                    <div className='elevenPage'>
+                        <div className='elevenPageContainer'>
+                            <div className='elevenPageContainer__left'>
+                                <h1 className='textColorCian fontSizeFour fontWeightBold'>Tokens no Fungibles (NFT)</h1>
+                                <p className='elevenPageContainer__left--top textColorWhite fontSizeTwoEight fontWeightLighter'>Todo lo que pertenezca al mundo digital, como una obra de arte, una canción o un libro.<br/>puede ser certificado de que es una obra original y que no ha sido modificada.<br/>
+                                    Esta apliación es útil para artistas que quieran universalizar sus obras. La venta y la compra de NFTs<br/>asegura que los artistas reciban su regalía en forma directa y sin intermediarios.    
+                                </p>
+                            </div>
+                            <div className='elevenPageContainerFlatmesh'>
+                                <img className='elevenPageContainerFlatmesh__size' src={flatmesh}></img>
+                            </div>
+                            <div className='elevenPageContainer__waveshorizontal'>
+                                <img className='elevenPageContainer__waveshorizontalSize' src={waveshorizontal}></img>
+                                <div className='elevenPageContainer__gradient elevenPageContainer__gradient--ubication'></div>
+                            </div>  
+                        </div>
+                    </div>
+
+
+                    <div className='twelvePage' id='twelvePage'>
+                        <div className='twelvePageContainer'>
+                            <div className='twelvePageContainer__right'>
+                                <h1 className='twelvePageContainer__right--bottom textColorCian fontSizeSeven fontWeightBold'>Algunos Conceptos</h1>
+                                <h2 className='twelvePageContainer__right--bottom textColorCian fontSizeFive fontWeightBold'>Criptografía</h2>
+                                <p className='twelvePageContainer__right--bottom textColorWhite fontSizeTwoEight fontWeightLighter'>Es una técnica de protección de datos y comunicaciones, utilizada en los desarrollos en cadena de<br/>bloques, para enviar o almacenar datos, de modo que solo el que envía y los destinatarios deseados<br/>
+                                    puedan acceder a los datos, sin interferencias de terceros y con la máxima seguridad posible.
+                                </p>
+                            </div>
+                            <div className='twelvePageContainer__right'>
+                                <h2 className='twelvePageContainer__right--bottom textColorCian fontSizeFive fontWeightBold'>Cadena de Bloques</h2>
+                                <p className='twelvePageContainer__right--bottom textColorWhite fontSizeTwoEight fontWeightLighter'>Es una novedosa tecnología que permite simplificar los procesos de su empresa, para dar transparencia,<br/>
+                                    inmutabilidad y seguridad. Elimina los intermediarios, la cantidad de manejo de documentos y el<br/>almacenamiento de registros. Le permite ahorrar tiempo y dinero.
+                                </p>
+                            </div>
+                            <div className='twelvePageContainer__right'>
+                                <h2 className='twelvePageContainer__right--bottom textColorCian fontSizeFive fontWeightBold'>Aplicación Descentralizada</h2>
+                                <p className='textColorWhite fontSizeTwoEight fontWeightLighter'>Conocidas como DApps, son aplicaciones que pueden correr en un celular o<br/>computador, cuya información es dividida en múltiples bloques,
+                                    que viajan<br/>simultaneamente a través de múltiples medios en internet, lo cual la hace<br/>mucho más segura e imposible de hackear.
+                                </p>
+                            </div>
+                        </div>
+                        <div className='twelvePageContainerSeparator twelvePageContainerSeparator--color'></div>
+                    </div>
+                    <div className='thirteenPage' id='thirteenPage'>
+                        <img className='thirteenPage__logoFooter' src={vortexfooter}></img>
+                        <div className='thirteenPage__logoLinkedin' >
+                            <a href='https://co.linkedin.com/'><img className='thirteenPage__logoLinkedin' src={logolinkedin}></img></a>  
+                        </div>
+                        <div className='thirteenPage__gmail'>  
+                            <a className='textColorWhite fontSizeTwoFive fontWeightLighter' href='https://www.google.com/intl/es-419/gmail/about/'>vortexlabcol@gmail.com</a>
+                        </div>
+                        
+                    </div>
                 </div>
             {/* </ParallaxProvider>  */}
         </>

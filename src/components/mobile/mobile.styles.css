@@ -1,0 +1,350 @@
+/* base */
+/* @font-face {
+  font-family: "Acumin Variable Concept";
+  src: url("./../../fonts/Acumin/Acumin\ Variable\ Concept.ttf")
+    format("truetype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #060622;
+  font-family: "Acumin Variable Concept";
+}
+
+#root {
+  justify-content: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+} */
+
+/*modules*/
+
+/*Layouts*/
+.flexDirectionRow {
+  flex-direction: row;
+}
+
+.displayInlineFlex {
+  display: inline-flex;
+}
+
+.displayFlexEnd {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/*Fin Layouts*/
+
+/* Clases solas reutilizadas */
+.background {
+  background-color: antiquewhite;
+}
+.widhtHundred {
+  width: 100px;
+}
+.textColorWhite {
+  color: white;
+}
+
+.textColorCian {
+  color: #1ae6ee;
+}
+
+.fontSizeTwo {
+  font-size: 2vh;
+}
+
+.fontSizeTwoFive {
+  font-size: 2.5vh;
+}
+
+.fontSizeTwoSeven {
+  font-size: 2.7vh;
+}
+
+.fontSizeThree {
+  font-size: 3vh;
+}
+
+.fontSizeFour {
+  font-size: 4vh;
+}
+
+.fontSizeFive {
+  font-size: 5vh;
+}
+
+.fontSizeSix {
+  font-size: 6vh;
+}
+
+.fontSizeSeven {
+  font-size: 7vh;
+}
+
+.fontSizeEight {
+  font-size: 8vh;
+}
+
+.fontSizeTen {
+  font-size: 10vh;
+}
+
+.fontWeightLighter {
+  font-weight: lighter;
+}
+
+.fontWeightBold {
+  font-weight: bold;
+}
+
+.marginTopTwo {
+  margin-top: 2%;
+}
+/* Fin clases solas */
+
+/*Principales*/
+.principalMobile {
+  /*no borrar*/
+  width: 100%;
+}
+
+.onePage__logoMobile {
+  width: 250px;
+  margin-top: 5%;
+  display: block;
+  margin: auto;
+}
+
+.onePage__HeaderMobileOne {
+  margin: 5px;
+  width: 190px;
+  display: inline-flex;
+}
+
+.onePage__HeaderMobileTwo {
+  margin: 7px;
+  width: 190px;
+  display: inline-flex;
+}
+
+.onePage__separatorMobileOne {
+  width: 100%;
+  height: 5px;
+}
+
+.onePage__separatorMobileTwo {
+  width: 100%;
+  height: 5px;
+}
+
+.onePage__separatorMobileThree {
+  width: 100%;
+  height: 1vh;
+  margin-top: 0%;
+}
+
+.onePage__txtSiMobile {
+  font-weight: bold;
+  display: block;
+  margin: auto;
+  margin-top: 10%;
+  width: 75%;
+  z-index: +1;
+}
+
+.onePage__meshMobile {
+  width: 70%;
+  top: 10%;
+  display: block;
+  margin: auto;
+  /*recorta la margen*/
+}
+
+.twoPageMobileContainer {
+  margin-top: 5px;
+  text-align: center;
+}
+
+.twoPageMobileContainer__text {
+  font-weight: bold;
+  margin-top: 10%;
+}
+
+.twoPageMobile__flower {
+  width: 200px;
+  height: 250px;
+  margin-left: -30px;
+}
+
+.threePageContainerMobile {
+  margin-top: 50px;
+}
+
+.threePageContainerMobile__TitleNe {
+  margin-left: 30px;
+}
+
+.threePageContainerMobile__TextSo {
+  margin-top: 10px;
+  margin-left: 30px;
+}
+
+.threePageContainerMobile__TextNu {
+  margin-top: 10px;
+  margin-left: 30px;
+}
+
+.fourPageContainerMobile {
+  margin-top: 20px;
+  width: 365px;
+}
+
+.fourPageContainerMobile__TituloPo {
+  margin-left: 30px;
+  margin-top: 100px;
+  width: 300px;
+}
+
+.fourPageContainerMobile__Paragraph {
+  margin-top: 20px;
+  margin-left: 30px;
+}
+
+.fourPageContainerMobile__ListPoint {
+  margin-left: 30px;
+  margin-top: 5px;
+  z-index: +1;
+  width: 35px;
+  height: 30px;
+}
+
+.fourPageMobile__flatmesh {
+  margin-top: -5%;
+  margin-left: -5px;
+  width: 370px;
+  z-index: -1;
+}
+
+.fivePageMobileContainer__H1 {
+  width: 300px;
+}
+
+.fivePageMobileContainer__H2 {
+  width: 300px;
+  text-align: right;
+}
+
+.fivePageMobileContainer__List {
+  margin-left: 358px;
+  margin-top: 5px;
+  z-index: 1;
+  width: 4px;
+}
+
+.fivePageMobileContainer__ListPoint {
+  height: 30px;
+  width: 35px;
+}
+
+.fivePageMobileContainer__ListPointP {
+  margin-top: -33px;
+}
+
+.sixPageMobileContainerList {
+  margin-top: 10%;
+}
+
+.sixPageMobileContainerList__Point {
+  height: 30px;
+  width: 35px;
+}
+
+/*Fin principales*/
+
+/* Modificadores */
+.onePage__logoMobile--margin {
+  --xyz-opacity: 0.5;
+}
+
+.onePage__HeaderMobile--spacing {
+  margin-left: 10px;
+}
+
+.onePage__separatorMobile--color {
+  background: linear-gradient(90deg, #214fb3, #0fb4df, #01feff);
+}
+
+.twoPageMobileContainer--display {
+  height: 16px;
+  margin-top: 35px;
+  margin-right: 15px;
+}
+
+.fourPageContainerMobile__ListPoint--margin {
+  margin-top: -30px;
+  margin-left: 70px;
+  width: 300px;
+}
+
+.fourPageMobile__flatmesh--size {
+  width: 370px;
+  height: 370px;
+}
+
+.fivePageMobileContainer__H1--marginTop {
+  margin-top: -45%;
+  margin-left: 20px;
+}
+
+.fivePageMobileContainer__H2--marginTop {
+  margin-top: 20px;
+  margin-left: 90px;
+}
+
+.fivePageMobileContainer__ListPointP--rightOne {
+  margin-left: -320px;
+  width: 350px;
+}
+
+.fivePageMobileContainer__ListPointP--rightTwo {
+  margin-left: -320px;
+  width: 350px;
+}
+
+.fivePageMobileContainer__ListPointP--rightThree {
+  margin-left: -320px;
+  width: 350px;
+}
+
+.fivePageMobileContainer__ListPointP--rightFour {
+  margin-left: -320px;
+  width: 350px;
+}
+
+.fivePageMobileContainer__ListPointP--rightFive {
+  margin-left: -320px;
+  width: 350px;
+}
+
+.fivePageMobileContainer__ListPointP--rightSix {
+  margin-left: -320px;
+  width: 350px;
+}
+
+.sixPageMobileContainerList__Point--margin {
+  margin-top: -33px;
+  margin-left: 35px;
+  width: 365px;
+}

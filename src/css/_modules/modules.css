@@ -301,6 +301,7 @@
 .sevenPageContainer_veticalmesh {
   margin-top: -19vh;
 }
+
 .sevenPageContainer_veticalmeshSize {
   height: auto;
   width: auto;
@@ -480,13 +481,10 @@
   z-index: -1;
 }
 
-.ninePageContainer {
-  margin-top: 10vh;
-}
-
 .twelvePageContainer {
   margin-top: 45vh;
 }
+
 .twelvePageContainer__right {
   margin-right: 30vh;
   text-align: right;

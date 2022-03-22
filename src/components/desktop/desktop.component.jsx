@@ -19,6 +19,7 @@ import vortexfooter from './../../assets/img/Vortex-Footer.png'
 import logolinkedin from './../../assets/img/Logo-Linkedin.png'
 import videoBackground from './../../assets/video/Animación.mp4'
 import webAnim from './../../assets/video/WebAnim_1.mp4'
+import baseAnim from './../../assets/video/Web_animation_2.mp4'
 
 export const Desktop = () => {
     return (
@@ -240,9 +241,24 @@ export const Desktop = () => {
                             <img className='sixPage__containerListPoint' src={point} alt="circle"/>
                             <p className='sixPage__containerListPoint--margin textColorWhite fontSizeTwoEight fontWeightLighter'>Generar trazabilidad para su organización.</p>
                             <br/><br/>
-                            <div className='sixPage__base'>
+                            <video
+                                autoPlay
+                                loop
+                                muted
+                                style={{
+                                    position: 'absolute',
+                                    width:"35%",
+                                    right:"35%",
+                                    zIndex:-3,
+                                    objectFit:"cover",
+                                    transform: "translate(80%,-80%)"
+                                }}
+                            >
+                                <source src={baseAnim}/>
+                            </video>
+                            {/* <div className='sixPage__base'>
                                 <img className='sixPage__base' src={Base}  alt='base'></img>
-                            </div>
+                            </div> */}
                         </div>
                         <div className='sixPage__separator sixPage__separator--color'></div>
                     </div>
@@ -251,20 +267,20 @@ export const Desktop = () => {
                         <div className='sevenPageContainer'>
                           <div className='sevenPageContainer__title'>
                             <h1 className='textColorWhite fontSizeFive fontWeightBold'>Nuestros servicios en Cadena de Bloques</h1>
-                        </div>
-                        <div className='sevenPageContainer_veticalmesh '>
-                            <img className='sevenPageContainer_veticalmeshSize' src={veticalmesh}  alt='verticalmesh'></img>
-                        </div>
-                        <div className='sevenPageContainer__subTitle'>
-                            <h1 className='textColorCian fontSizeFour fontWeightBold'>Desarrollo para Metaverso</h1><br/><br/>
-                            <p className='sevenPageContainer__subTitle--top textColorWhite fontSizeTwoEight fontWeightLighter'>Es un ambiente virtual, donde los usuarios pueden trabajar, jugar y vivir todo tipo de experiencias.<br/>
-                                Usted puede tener actividades comerciales en oficinas, centros comerciales y casas. Esta nueva <br/> economía implica el uso de monedas virtuales.<br/><br/>
-                                Desarrollos para monetización en el concepto de Metaverso, definido por el fundador de <br/> Facebook, moneda, pagos, compras y contratos inteligentes en cadena de bloques.
-                            </p>
-                            <h1 className='textColorCian fontSizeFour fontWeightBold'>Consultoría y auditoría de proyectos</h1><br/>
-                            <p className='sevenPageContainer__subTitle--top textColorWhite fontSizeTwoEight fontWeightLighter'>No importa si usted no ha contratado con nosotros, permítanos auditar su desarrollo como una <br/> 
-                                segunda opinión, que le permita tener confianza en su proyecto antes de ser lanzado</p>
-                        </div>  
+                            </div>
+                            <div className='sevenPageContainer_veticalmesh '>
+                                <img className='sevenPageContainer_veticalmeshSize' src={veticalmesh}  alt='verticalmesh'></img>
+                            </div>
+                            <div className='sevenPageContainer__subTitle'>
+                                <h1 className='textColorCian fontSizeFour fontWeightBold'>Desarrollo para Metaverso</h1><br/><br/>
+                                <p className='sevenPageContainer__subTitle--top textColorWhite fontSizeTwoEight fontWeightLighter'>Es un ambiente virtual, donde los usuarios pueden trabajar, jugar y vivir todo tipo de experiencias.<br/>
+                                    Usted puede tener actividades comerciales en oficinas, centros comerciales y casas. Esta nueva <br/> economía implica el uso de monedas virtuales.<br/><br/>
+                                    Desarrollos para monetización en el concepto de Metaverso, definido por el fundador de <br/> Facebook, moneda, pagos, compras y contratos inteligentes en cadena de bloques.
+                                </p>
+                                <h1 className='textColorCian fontSizeFour fontWeightBold'>Consultoría y auditoría de proyectos</h1><br/>
+                                <p className='sevenPageContainer__subTitle--top textColorWhite fontSizeTwoEight fontWeightLighter'>No importa si usted no ha contratado con nosotros, permítanos auditar su desarrollo como una <br/> 
+                                    segunda opinión, que le permita tener confianza en su proyecto antes de ser lanzado</p>
+                            </div>  
                         </div>
                     </div>
 

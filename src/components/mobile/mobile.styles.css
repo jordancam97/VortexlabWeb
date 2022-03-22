@@ -30,6 +30,13 @@ a:hover {
 
 /*modules*/
 
+.bars {
+  color: white;
+}
+.textAlignCenter {
+  text-align: center;
+}
+
 /*Layouts*/
 .flexDirectionRow {
   flex-direction: row;
@@ -59,6 +66,9 @@ a:hover {
 
 .textColorCian {
   color: #1ae6ee;
+}
+.fontSizeOneFive {
+  font-size: 1.5vh;
 }
 
 .fontSizeTwo {
@@ -159,16 +169,15 @@ a:hover {
   font-weight: bold;
   display: block;
   margin: auto;
-  margin-top: 10%;
+  margin-top: 5%;
   width: 75%;
   z-index: +1;
 }
 
 .onePage__meshMobile {
   width: 70%;
-  top: 10%;
-  display: block;
-  margin: auto;
+  margin-top: 15%;
+  margin-left: 50px;
   /*recorta la margen*/
 }
 
@@ -263,7 +272,7 @@ a:hover {
 }
 
 .sixPageMobileContainerList {
-  margin-top: 10%;
+  margin-top: 20%;
 }
 
 .sixPageMobileContainerList__Point {
@@ -271,6 +280,209 @@ a:hover {
   width: 35px;
 }
 
+.sixPageMobile__base {
+  width: 50px;
+}
+
+.sixPageMobile__separator {
+  width: 100%;
+  height: 20px;
+}
+
+.sevenPageMobileContainer {
+  margin-top: 10%;
+}
+
+.sevenPageMobileContainer__title {
+  margin-top: 15%;
+  margin-left: 15px;
+  z-index: +1;
+}
+
+.sevenPageMobileContainer_veticalmesh {
+  margin-top: -39%;
+  z-index: -1;
+  position: absolute;
+}
+
+.sevenPageMobileContainer_veticalmeshSize {
+  height: 1200px;
+  width: 200px;
+  margin-left: 210px;
+}
+
+.sevenPageMobileContainer__subTitle {
+  margin-top: 15%;
+  margin-left: 15px;
+}
+
+.sevenPage__separator {
+  width: 100%;
+  height: 20px;
+}
+
+.eightPageMobileContainer {
+  margin-top: 15%;
+}
+
+.eightPageMobileContainer__title {
+  margin-left: 15px;
+}
+
+.eightPageMobileContainer__titleTwo {
+  margin-top: 5%;
+  margin-left: 15px;
+}
+
+.eightPageMobileContainer__gradientBox {
+  width: 390px;
+  height: 50px;
+  border-width: 2px;
+  border-style: solid;
+  margin-top: 5%;
+  border-image: linear-gradient(
+      to right,
+      #04f3bc,
+      #04e4cc,
+      #30d4d4,
+      #04b0fc,
+      #0998fc,
+      #1074fc,
+      #145cfc,
+      #3744fc
+    )
+    1;
+}
+
+.eightPageMobileContainer__text {
+  text-align: center;
+  margin-top: 3px;
+}
+
+.eightPageMobileContainer__imageRings {
+  width: 150px;
+  height: 150px;
+  margin-top: 15%;
+  margin-left: 15px;
+  z-index: +1;
+}
+
+.eightPageMobileContainer__imageParticle {
+  width: 150px;
+  height: 150px;
+  margin-top: 15%;
+  margin-left: 40px;
+  z-index: +2;
+}
+
+.eightPageMobileContainer__gradient {
+  width: 150px;
+  height: 150px;
+  margin: 2em auto;
+  background: radial-gradient(
+    circle farthest-side at center center,
+    #0d354e,
+    #060622
+  );
+  border-radius: 100%;
+  z-index: -1;
+}
+
+.eightPageMobile__separator {
+  width: 100%;
+  height: 20px;
+}
+
+.ninePageMobileContainer {
+  margin-top: 10%;
+}
+
+.ninePageMobileContainer__central {
+  /* display: block;
+  margin: auto; */
+  text-align: center;
+}
+
+.ninePageMobileContainer__invertedmesh {
+  height: 300px;
+  width: 300px;
+  margin-left: 50px;
+  margin-top: 30px;
+}
+
+.ninePageMobileContainer__gradient {
+  width: 200px;
+  height: 200px;
+  margin: 2em auto;
+  background: radial-gradient(
+    circle farthest-side at center center,
+    #0d354e,
+    #060622
+  );
+  border-radius: 100%;
+  z-index: -1;
+}
+
+.tenPageMobileContainer {
+  margin-top: 10%;
+}
+
+.tenPageMobileContainer__central {
+  margin-left: 15px;
+}
+
+.tenPageMobileContainer__particle {
+  height: 300px;
+  width: 300px;
+  margin-left: 50px;
+  margin-top: 20px;
+}
+
+.elevenPageMobileContainer {
+  margin-top: 10%;
+}
+
+.elevenPageMobileContainer__central {
+  margin-left: 15px;
+}
+
+.elevenPageMobileContainerFlatmesh {
+  margin-left: 10px;
+}
+
+.elevenPageMobileContainerFlatmesh__size {
+  height: 400px;
+  width: 400px;
+  margin-top: -5%;
+}
+
+.twelvePageMobileContainer {
+  margin-top: -30%;
+  margin-left: 15px;
+}
+
+.twelvePageMobileContainerSeparator {
+  width: 100%;
+  height: 10px;
+}
+
+.thirteenPageMobile__logoFooter {
+  width: 100px;
+  display: block;
+  margin: auto;
+}
+
+.thirteenPageMobile__logoLinkedin {
+  width: 100px;
+  margin-left: 80px;
+  margin-top: -5%;
+}
+
+.thirteenPageMobile__gmail {
+  margin-left: 130px;
+  margin-top: 0%;
+  margin-bottom: 20px;
+}
 /*Fin principales*/
 
 /* Modificadores */
@@ -347,4 +559,114 @@ a:hover {
   margin-top: -33px;
   margin-left: 35px;
   width: 365px;
+}
+
+.sixPageMobile__separator--color {
+  background: linear-gradient(
+    90deg,
+    #04f3bc,
+    #04e4cc,
+    #30d4d4,
+    #04b0fc,
+    #0998fc,
+    #1074fc,
+    #145cfc,
+    #3744fc
+  );
+  margin-top: 100%;
+}
+
+.sevenPageMobileContainer__subTitle--top {
+  margin-top: 10%;
+  margin-bottom: -15px;
+}
+
+.sevenPageMobile__separator--color {
+  background: linear-gradient(
+    90deg,
+    #04f3bc,
+    #04e4cc,
+    #30d4d4,
+    #04b0fc,
+    #0998fc,
+    #1074fc,
+    #145cfc,
+    #3744fc
+  );
+  margin-top: 8%;
+}
+
+.eightPageMobileContainer__subTitle--top {
+  margin-top: 15%;
+  width: 350px;
+  /* margin-bottom: 15vh; */
+}
+
+.eightPageMobileContainer__gradient--ubication {
+  margin-left: 18px;
+  margin-top: -30%;
+}
+
+.eightPageMobileContainer__gradient--ubicationTwo {
+  margin-left: 200px;
+  margin-top: -38%;
+}
+
+.eightPageMobile__separator--color {
+  background: linear-gradient(
+    90deg,
+    #04f3bc,
+    #04e4cc,
+    #30d4d4,
+    #04b0fc,
+    #0998fc,
+    #1074fc,
+    #145cfc,
+    #3744fc
+  );
+  margin-top: 8%;
+}
+
+.ninePageMobileContainer__central--top {
+  margin-top: 5%;
+}
+
+.ninePageMobileContainer__gradient--ubication {
+  margin-left: 80px;
+  margin-top: -140px;
+}
+
+.tenPageMobileContainer__central--top {
+  margin-top: 20px;
+}
+
+.elevenPageMobileContainer__central--top {
+  margin-top: 10%;
+}
+
+.twelvePageMobileContainer__right--bottom {
+  margin-bottom: 10%;
+}
+
+.twelvePageMobileContainer__right--top {
+  margin-top: 40%;
+}
+
+.twelvePageMobileContainer__right--topT {
+  margin-top: 10%;
+}
+
+.twelvePageMobileContainerSeparator--color {
+  background: linear-gradient(
+    90deg,
+    #3744fc,
+    #145cfc,
+    #1074fc,
+    #0998fc,
+    #04b0fc,
+    #30d4d4,
+    #04e4cc,
+    #04f3bc
+  );
+  margin-top: 10%;
 }

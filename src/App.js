@@ -6,6 +6,8 @@ import Home from '../src/components/Home'
 import  {Mobile}  from './components/mobile/mobile.component.jsx'
 import {Desktop} from './components/desktop/desktop.component.jsx';
 import { useMediaQuery } from 'react-responsive'
+import NavbarComp from './components/NavBar/NavbarComp';
+//import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = () => {
 
@@ -17,6 +19,7 @@ const App = () => {
 
   return (
     <div>
+      {/* <NavbarComp/> */}
       {isTabletOrMobile  && <Mobile/>} 
       {isDesktopOrLaptop && <>
         <Desktop />

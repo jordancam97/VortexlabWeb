@@ -79,7 +79,7 @@
 .onePage__Header {
   margin-left: 100vh;
   margin-top: -7.3vh;
-  width: 80vh;
+  width: 90vh;
   display: flex;
 }
 
@@ -559,6 +559,7 @@
 
 .onePage__Header--spacing {
   margin-left: 5vh;
+ 
 }
 
 .onePage__gradient--color {

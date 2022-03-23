@@ -246,8 +246,14 @@ a:hover {
   z-index: -1;
 }
 
+.fivePageMobile {
+  margin-top: 80%;
+}
+
 .fivePageMobileContainer__H1 {
   width: 300px;
+  z-index: +1;
+  position: relative;
 }
 
 .fivePageMobileContainer__H2 {

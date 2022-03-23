@@ -105,17 +105,15 @@
   z-index: +1;
   padding-right: 15vh;
 }
-/* metiendo animación */
-
-/* metiendo animación */
 
 .onePage__mesh {
-  width: 80vh;
-  height: 80vh;
-  margin-left: 123vh;
+  width: 70vh;
+  height: 76vh;
+  margin-left: 130vh;
   position: absolute;
-  margin-top: -55vh;
-  object-position: 7vh;
+  margin-top: -50vh;
+  background-color: #060622;
+  object-position: 0vh;
   /*recorta la margen*/
 }
 
@@ -234,6 +232,8 @@
 .fivePage__contenedorH1 {
   height: 9vh;
   width: 105vh;
+  z-index: +1;
+  position: relative;
 }
 
 .fivePage__contenedorH2 {
@@ -245,7 +245,7 @@
 .fivePage__containerList {
   margin-left: 162.5vh;
   margin-top: 5vh;
-  z-index: 1;
+  z-index: +1;
   position: absolute;
   width: 4vh;
 }
@@ -454,13 +454,13 @@
 .elevenPageContainerFlatmesh__size {
   height: 120vh;
   width: 120vh;
-  margin-top: 8vh;
+  margin-top: 0vh;
 }
 
 .elevenPageContainer__waveshorizontal {
-  margin-top: -130vh;
+  margin-top: -120vh;
   margin-left: 150vh;
-  /* z-index: +1; */
+  z-index: -1;
 }
 
 .elevenPageContainer__waveshorizontalSize {
@@ -486,10 +486,12 @@
 }
 
 .twelvePageContainer {
-  margin-top: 45vh;
+  margin-top: 30vh;
+  z-index: +1;
+  position: relative;
 }
 .twelvePageContainer__right {
-  margin-right: 30vh;
+  margin-right: 15vh;
   text-align: right;
 }
 

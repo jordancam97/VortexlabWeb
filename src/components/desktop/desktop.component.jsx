@@ -1,6 +1,6 @@
 // desktop.component.jsx
 
-import React from 'react'
+import React, {useEffect} from 'react'
 import './desktop.styles.css'
 import logoVortex from './../../assets/img/Vortex.png'
 import mesh from './../../assets/img/malla.png'
@@ -8,8 +8,8 @@ import waves from './../../assets/img/waves.png'
 import balls from './../../assets/img/balls.png'
 import point from './../../assets/img/point.png'
 import flatmesh from './../../assets/img/mallaPlana.png'
-import Base from './../../assets/img/3D-Base.png'
-import veticalmesh from './../../assets/img/mallaVertical.png'
+//import Base from './../../assets/img/3D-Base.png'
+import verticalmesh from './../../assets/img/mallaVertical.png'
 import anillos from './../../assets/img/anillos.png'
 import particleTwo from './../../assets/img/ParticleDos.png'
 import invertedmesh from './../../assets/img/mallaInvertida.png'
@@ -20,8 +20,97 @@ import logolinkedin from './../../assets/img/Logo-Linkedin.png'
 import videoBackground from './../../assets/video/Animación.mp4'
 import webAnim from './../../assets/video/WebAnim_1.mp4'
 import baseAnim from './../../assets/video/Web_animation_2.mp4'
-
+import {TweenLite, TweenMax, Linear} from 'gsap';
+import flatmeshTwo from './../../assets/img/mallaPlana.png'
 export const Desktop = () => {
+    
+    useEffect(() => {
+        // TweenMax.from(point, 4, {x:"20%", ease: Linear.easeNone, repeat: 0});  animacion points
+        TweenMax.to(mesh, 2, {
+            css: {
+              opacity: 1,
+              scale: .95
+            },
+            ease: Linear.easeNone,
+            repeat: -1,
+            yoyo: true,
+            
+        });
+        TweenMax.to(waves, 2, {
+            css: {
+              opacity: 1,
+              scale: .95
+            },
+            ease: Linear.easeNone,
+            repeat: -1,
+            yoyo: true,
+            
+        });
+        TweenMax.to(flatmesh, 2, {
+            css: {
+              opacity: 1,
+              scale: .95,
+              zIndex:-1,
+                position: 'absolute',
+            },
+            ease: Linear.easeNone,
+            repeat: -1,
+            yoyo: true,
+        });
+        TweenMax.to(anillos, 2, {
+            css: {
+              opacity: 1,
+              scale: .95,
+              zIndex:-1,
+            },
+            ease: Linear.easeNone,
+            repeat: -1,
+            yoyo: true,
+        });
+        TweenMax.to(particleTwo, 2, {
+            css: {
+              opacity: 1,
+              scale: .95,
+              zIndex:-1,
+            },
+            ease: Linear.easeNone,
+            repeat: -1,
+            yoyo: true,
+        });
+        TweenMax.to(invertedmesh, 2, {
+            css: {
+              opacity: 1,
+              scale: .95,
+              zIndex:-1,
+            },
+            ease: Linear.easeNone,
+            repeat: -1,
+            yoyo: true,
+        });
+        TweenMax.to(particle, 2, {
+            css: {
+              opacity: 1,
+              scale: .95,
+              zIndex:-1,
+            },
+            ease: Linear.easeNone,
+            repeat: -1,
+            yoyo: true, 
+        });
+        TweenMax.to(waveshorizontal, 2, {
+            css: {
+              opacity: 1,
+              scale: .95,
+              zIndex:-1,
+            },
+            ease: Linear.easeNone,
+            repeat: -1,
+            yoyo: true,
+        });
+
+    }, []);
+
+    
     return (
         <>
          {/* <ParallaxProvider > */}
@@ -32,16 +121,16 @@ export const Desktop = () => {
                         muted
                         style={{
                             position: 'absolute',
-                            width:"75%",
-                            right:"35%",
+                            width:"70%",
+                            right:"45%",
                             zIndex:-3,
                             objectFit:"cover",
-                            transform: "translate(0%,16%)"
+                            transform: "translate(4%,25%)"
                         }}
                     >
                         <source src={videoBackground}/>
                     </video>
-                    <div className='onePage'>
+                    <div className='onePage' >
                         {/* Panel izquierdo 1ra screen*/}
                         <div className='onePage__logo '>
                             <img className='onePage__logo onePage__logo--margin' src={logoVortex} alt="logo"/>
@@ -52,14 +141,8 @@ export const Desktop = () => {
                                 <a href='#sevenPage'><p className='onePage__Header--spacing fontSizeTwo textColorWhite'>Nuestros Servicios</p></a>
                                 <a href='#twelvePage'><p className='onePage__Header--spacing fontSizeTwo textColorWhite'>Algunos Conceptos</p></a>
                                 <a href='#thirteenPage'><p className='onePage__Header--spacing fontSizeTwo textColorWhite'>Contacto</p></a>
-                                    {/* {anime} */}
                             </div>
-                        
-                        
-                        {/* <div className='onePage__gradient onePage__gradient--marginOne'/>
-                        <div className='onePage__gradient onePage__gradient--marginTwo'/>
-                        <div className='onePage__gradient onePage__gradient--marginThree'/>
-                        <div className='onePage__gradient onePage__gradient--sizeTwentyseven onePage__gradient--marginFour'/> */}
+
                        
                         <p className=" onePage__txtSi textColorWhite fontSizeSix" >
                             Es hora de adaptar su empresa a las nuevas tecnologías blockchain, web 3.0, defi, fintech, metaverso, A.I  y criptomonedas.
@@ -67,7 +150,7 @@ export const Desktop = () => {
                         
                         {/* Panel derecho 1ra screen*/}
                         
-                        <img className="onePage__mesh" src={mesh} alt="mesh"/>
+                        <img className="onePage__mesh" src={mesh} alt="mesh" ref={el => mesh = el }/>
                         {/* separador */}
                         <div className='onePage__separator onePage__separator--color'></div>
                     </div>
@@ -97,7 +180,7 @@ export const Desktop = () => {
                             <p className="textColorWhite fontSizeFive fontWeightLighter marginTopTwo displayFlexEnd">...Hoy</p>
                         </div> 
                        
-                        <img className="twoPage__flower" src={waves} alt="waves"/>
+                        <img className="twoPage__flower" src={waves} alt="waves" ref={el => waves = el }/>
                         <div className='onePage__gradient onePage__gradient--color twoPage__GradientFlower'></div>
                     </div>
 
@@ -129,8 +212,6 @@ export const Desktop = () => {
                         >
                             <source src={webAnim}/>
                         </video>
-                        {/* <img className="threePage__balls" src={balls} alt="ball"/> */}
-                        {/* <div className='threePage__gradient threePage__gradient--color '> </div> */}
                     </div>
                   
 
@@ -141,30 +222,31 @@ export const Desktop = () => {
                          <div className='fourPage__containerParagraph'>
                             <p className=" textColorWhite fontSizeTwoEight fontWeightLighter ">Somos importantes porque:</p>
                         </div>
-                        <div className='fourPage__containerList' ref={el => point = el }>
-                            <img className='fourPage__containerListPoint' src={point} alt="circle"/>
+                        <div className='fourPage__containerList'>
+                        {/* ref={el => point = el } */}
+                            <img className='fourPage__containerListPoint' src={point} alt="point"/>
                             <p className='fourPage__containerListPoint--margin textColorWhite fontSizeTwoEight fontWeightLighter'>Podemos hacer que su empresa se adapte a las nuevas tecnologías, cuyos cambios se revierten en menor tiempo, menor costo, mas seguridad y mayor confiabilidad 
                                 de su servicio.
                             </p>
                             <br/><br/>
 
-                             <img className='fourPage__containerListPoint' src={point} alt="circle"/>
+                             <img className='fourPage__containerListPoint' src={point} alt="point"/>
                             <p className='fourPage__containerListPoint--margin textColorWhite fontSizeTwoEight fontWeightLighter'>Somos de las pocas empresas, con desarrollo mostrables en cadena de bloques.</p>
                             <br/><br/>
 
-                            <img className='fourPage__containerListPoint' src={point} alt="circle"/>
+                            <img className='fourPage__containerListPoint' src={point} alt="point"/>
                             <p className='fourPage__containerListPoint--margin textColorWhite fontSizeTwoEight fontWeightLighter'>Contamos con un equipo de desarrolladores especializados y con experiencia en el tema.</p>
                             <br/><br/>
 
-                            <img className='fourPage__containerListPoint' src={point} alt="circle"/>
+                            <img className='fourPage__containerListPoint' src={point} alt="point"/>
                             <p className='fourPage__containerListPoint--margin textColorWhite fontSizeTwoEight fontWeightLighter'>Estamos respaldados con otras empresas y personas conocidas por su innovación.</p>
                             <br/><br/>
 
-                            <img className='fourPage__containerListPoint' src={point} alt="circle"/>
+                            <img className='fourPage__containerListPoint' src={point} alt="point"/>
                             <p className='fourPage__containerListPoint--margin textColorWhite fontSizeTwoEight fontWeightLighter'>Usted puede visitarnos en nuestras oficinas y verificar el paso a paso de su proceso.</p>
                         </div>
                         <div className='fourPage__flatmesh'>
-                            <img className='fourPage__flatmesh--size' src={flatmesh} alt='flatmesh'></img>
+                            <img className='fourPage__flatmesh--size' src={flatmesh} alt='flatmesh' ref={el => flatmesh = el }></img>
                         </div> 
                     </div>
 
@@ -256,9 +338,6 @@ export const Desktop = () => {
                             >
                                 <source src={baseAnim}/>
                             </video>
-                            {/* <div className='sixPage__base'>
-                                <img className='sixPage__base' src={Base}  alt='base'></img>
-                            </div> */}
                         </div>
                         <div className='sixPage__separator sixPage__separator--color'></div>
                     </div>
@@ -269,7 +348,7 @@ export const Desktop = () => {
                             <h1 className='textColorWhite fontSizeFive fontWeightBold'>Nuestros servicios en Cadena de Bloques</h1>
                             </div>
                             <div className='sevenPageContainer_veticalmesh '>
-                                <img className='sevenPageContainer_veticalmeshSize' src={veticalmesh}  alt='verticalmesh'></img>
+                                <img className='sevenPageContainer_veticalmeshSize' src={verticalmesh} alt='verticalmesh' ref={el => verticalmesh = el }></img>
                             </div>
                             <div className='sevenPageContainer__subTitle'>
                                 <h1 className='textColorCian fontSizeFour fontWeightBold'>Desarrollo para Metaverso</h1><br/><br/>
@@ -298,8 +377,8 @@ export const Desktop = () => {
                                 </div>
                                 <p className='eightPageContainer__subTitle--top textColorCian fontSizeTwoFive fontWeightLighter'>Mantiene la privacidad de la información y con la seguridad que garantiza la cadena de bloques</p>
                             </div>
-                            <img className='eightPageContainer__imageRings' src={anillos} alt='Rings'></img>
-                            <img className='eightPageContainer__imageParticle' src={particleTwo} alt='particleTwo'></img>
+                            <img className='eightPageContainer__imageRings' src={anillos} alt='Rings' ref={el => anillos = el }></img>
+                            <img className='eightPageContainer__imageParticle' src={particleTwo} alt='particleTwo' ref={el => particleTwo = el }></img>
                             <div className='eightPageContainer__gradient eightPageContainer__gradient--ubication'></div>
                             <div className='eightPageContainer__gradient eightPageContainer__gradient--ubicationTwo'></div>   
                         </div>
@@ -325,7 +404,7 @@ export const Desktop = () => {
                                 <h1 className='ninePageContainer__right--bottom textColorCian fontSizeThree fontWeightBold'>Firma Electronica</h1>
                                 <p className='textColorWhite fontSizeTwoEight fontWeightLighter'>Para que el contenido de sus documentos no pueda ser adulterados y siempre<br/>permanezcan con la originalidad del autor.</p>  
                             </div>
-                            <img className='ninePageContainer__invertedmesh' src={invertedmesh}></img>
+                            <img className='ninePageContainer__invertedmesh' src={invertedmesh} alt='invertedmesh' ref={el => invertedmesh = el }></img>
                             <div className='ninePageContainer__gradient ninePageContainer__gradient--ubication'></div>
                         </div>
                     </div>
@@ -349,7 +428,7 @@ export const Desktop = () => {
                                     Scripts para funciones de intercambio con otras monedas y su posible monetización.
                                 </p>  
                             </div>
-                            <img className='tenPageContainer__particle' src={particle}></img>
+                            <img className='tenPageContainer__particle' src={particle} alt='particle' ref={el => particle = el }></img>
                             <div className='tenPageContainer__gradient tenPageContainer__gradient--ubication'></div>
                         </div>
                     </div>
@@ -364,10 +443,10 @@ export const Desktop = () => {
                                 </p>
                             </div>
                             <div className='elevenPageContainerFlatmesh'>
-                                <img className='elevenPageContainerFlatmesh__size' src={flatmesh}></img>
+                                <img className='elevenPageContainerFlatmesh__size' src={flatmesh} alt='flatmesh' ></img>
                             </div>
                             <div className='elevenPageContainer__waveshorizontal'>
-                                <img className='elevenPageContainer__waveshorizontalSize' src={waveshorizontal}></img>
+                                <img className='elevenPageContainer__waveshorizontalSize' src={waveshorizontal} alt='waveshorizontal' ref={el => waveshorizontal = el }></img>
                                 <div className='elevenPageContainer__gradient elevenPageContainer__gradient--ubication'></div>
                             </div>  
                         </div>

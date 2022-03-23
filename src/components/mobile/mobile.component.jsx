@@ -20,8 +20,86 @@ import vortexfooter from './../../assets/img/Vortex-Footer.png'
 import logolinkedin from './../../assets/img/Logo-Linkedin.png'
 import './mobile.styles.css';
 import NavbarComp from './../../../src/components/NavBar/NavbarComp';
+import {TweenLite, TweenMax, Linear, Power1, Back, gsap} from 'gsap';
 
 export const Mobile = () => {
+
+    useEffect(() => {
+        // TweenMax.from(point, 4, {x:"20%", ease: Linear.easeNone, repeat: 0});  animacion points
+        TweenMax.to(mesh, 2, {
+            css: {
+              opacity: 1,
+              scale: .95
+            },
+            ease: Linear.easeNone,
+            repeat: -1,
+            yoyo: true,
+            
+        });
+        TweenMax.to(waves, 2, {
+            css: {
+              opacity: 1,
+              scale: .95
+            },
+            ease: Linear.easeNone,
+            repeat: -1,
+            yoyo: true,
+            
+        });
+        TweenMax.to(flatmesh, 2, {
+            css: {
+              opacity: 1,
+              scale: .95,
+              zIndex:-1,
+                position: 'absolute',
+            },
+            ease: Linear.easeNone,
+            repeat: -1,
+            yoyo: true,
+        });
+        TweenMax.to(anillos, 2, {
+            css: {
+              opacity: 1,
+              scale: .95,
+              zIndex:-1,
+            },
+            ease: Linear.easeNone,
+            repeat: -1,
+            yoyo: true,
+        });
+        TweenMax.to(particleTwo, 2, {
+            css: {
+              opacity: 1,
+              scale: .95,
+              zIndex:-1,
+            },
+            ease: Linear.easeNone,
+            repeat: -1,
+            yoyo: true,
+        });
+        TweenMax.to(invertedmesh, 2, {
+            css: {
+              opacity: 1,
+              scale: .95,
+              zIndex:-1,
+            },
+            ease: Linear.easeNone,
+            repeat: -1,
+            yoyo: true,
+        });
+        TweenMax.to(particle, 2, {
+            css: {
+              opacity: 1,
+              scale: .95,
+              zIndex:-1,
+            },
+            ease: Linear.easeNone,
+            repeat: -1,
+            yoyo: true, 
+        });
+        
+    }, []);
+
     return (
         <>
             <div className='principalMobile'>
@@ -46,20 +124,11 @@ export const Mobile = () => {
                         <img className='onePage__logoMobile onePage__logoMobile--margin' src={logoVortex} alt="logo"/>
                     </div>
                     <div className='onePage__separatorMobileOne onePage__separatorMobile--color'></div>
-                    {/* <div className='onePage__HeaderMobileOne'>
-                        <a href='#threePage'><p className=' onePage__HeaderMobile--spacing fontSizeTwo textColorWhite'>Nuestra Empresa</p></a>
-                        <a href='#sevenPage'><p className=' onePage__HeaderMobile--spacing fontSizeTwo textColorWhite'>Nuestros Servicios</p></a>
-                    </div>
-                    <div className='onePage__HeaderMobileTwo'>
-                        <a href='#twelvePage'><p className='onePage__HeaderMobile--spacing fontSizeTwo textColorWhite'>Algunos Conceptos</p></a>
-                        <a href='#thirteenPage'><p className='onePage__HeaderMobile--spacing fontSizeTwo textColorWhite'>Contacto</p></a>
-                    </div> */}
                         <NavbarComp/>
-                     {/* <div className='background onePage__separatorMobileTwo onePage__separatorMobile--color'></div> */}
                     <p className="onePage__txtSiMobile textColorWhite fontSizeFive">
                         Es hora de adaptar su empresa a<br/> las nuevas tecnologías <br/>blockchain, web 3.0, defi, fintech, metaverso, A.I  y criptomonedas.
                     </p>
-                    <img className="onePage__meshMobile" src={mesh} alt="mesh"/>
+                    <img className="onePage__meshMobile" src={mesh} alt="mesh" ref={el => mesh = el }/>
                     <div className=' onePage__separatorMobileThree onePage__separatorMobile--color'></div>
                 </div>
 
@@ -84,7 +153,7 @@ export const Mobile = () => {
                         </div>
                         <p className="textColorWhite fontSizeTwoFive fontWeightLighter marginTopTwo displayFlexEnd">...Hoy</p>
                     </div>
-                    <img className="twoPageMobile__flower" src={waves} alt="waves"/>
+                    <img className="twoPageMobile__flower" src={waves} alt="waves" ref={el => waves = el }/>
                 </div>
                 <div className='threePageMobile' id='threePage'>
                     <div className='threePageContainerMobile'>
@@ -144,7 +213,7 @@ export const Mobile = () => {
                             <p className='fourPageContainerMobile__ListPoint--margin textColorWhite fontSizeTwoEight fontWeightLighter'>Usted puede visitarnos en nuestras oficinas y verificar el paso a paso de su proceso.</p>            
                     </div>
                     <div className='fourPageMobile__flatmesh'>
-                        <img className='fourPageMobile__flatmesh--size' src={flatmesh} alt='flatmesh'></img>
+                        <img className='fourPageMobile__flatmesh--size' src={flatmesh} alt='flatmesh' ref={el => flatmesh = el }></img>
                     </div>
                 </div>
 
@@ -275,8 +344,8 @@ export const Mobile = () => {
                             </div>
                             <p className='eightPageMobileContainer__subTitle--top textColorCian fontSizeTwo fontWeightLighter textAlignCenter'>Mantiene la privacidad de la información y con la seguridad que garantiza la cadena de bloques</p>
                         </div>
-                        <img className='eightPageMobileContainer__imageRings' src={anillos} alt='Rings'></img>
-                        <img className='eightPageMobileContainer__imageParticle' src={particleTwo} alt='particleTwo'></img>
+                        <img className='eightPageMobileContainer__imageRings' src={anillos} alt='Rings' ref={el => anillos = el }></img>
+                        <img className='eightPageMobileContainer__imageParticle' src={particleTwo} alt='particleTwo' ref={el => particleTwo = el }></img>
                         <div className='eightPageMobileContainer__gradient eightPageMobileContainer__gradient--ubication'></div>
                         <div className='eightPageMobileContainer__gradient eightPageMobileContainer__gradient--ubicationTwo'></div>
                     </div>
@@ -301,7 +370,7 @@ export const Mobile = () => {
                             <h1 className='ninePageMobileContainer__central--top textColorCian fontSizeThree fontWeightBold'>Firma Electronica</h1>
                             <p className='ninePageMobileContainer__central--top textColorWhite fontSizeTwo fontWeightLighter'>Para que el contenido de sus documentos no pueda ser adulterados y siempre<br/>permanezcan con la originalidad del autor.</p>  
                         </div>
-                        <img className='ninePageMobileContainer__invertedmesh' src={invertedmesh}></img>
+                        <img className='ninePageMobileContainer__invertedmesh' src={invertedmesh} alt='invertedmesh' ref={el => invertedmesh = el }></img>
                         <div className='ninePageMobileContainer__gradient ninePageMobileContainer__gradient--ubication'></div>
                     </div>
                 </div>
@@ -324,7 +393,7 @@ export const Mobile = () => {
                                 Scripts para funciones de intercambio con otras monedas y su posible monetización.
                             </p>  
                         </div>
-                        <img className='tenPageMobileContainer__particle' src={particle}></img>
+                        <img className='tenPageMobileContainer__particle' src={particle} alt='particle' ref={el => particle = el }></img>
                     </div>
                 </div>
 

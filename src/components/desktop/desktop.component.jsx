@@ -480,7 +480,7 @@ export const Desktop = () => {
                     <div className='thirteenPage' id='thirteenPage'>
                         <img className='thirteenPage__logoFooter' src={vortexfooter}></img>
                         <div className='thirteenPage__logoLinkedin' >
-                            <a href='https://co.linkedin.com/'><img className='thirteenPage__logoLinkedin' src={logolinkedin}></img></a>  
+                            <a href='https://www.linkedin.com/company/vortex-labcol'><img className='thirteenPage__logoLinkedin' src={logolinkedin}></img></a>  
                         </div>
                         <div className='thirteenPage__gmail'>  
                             <a className='textColorWhite fontSizeTwoFive fontWeightLighter' href='https://www.google.com/intl/es-419/gmail/about/'>vortexlabcol@gmail.com</a>

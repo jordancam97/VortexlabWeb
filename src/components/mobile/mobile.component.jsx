@@ -437,7 +437,7 @@ export const Mobile = () => {
                 <div className='thirteenPageMobile' id='thirteenPage'>
                     <img className='thirteenPageMobile__logoFooter' src={vortexfooter}></img>
                     <div className='thirteenPageMobile__logoLinkedin' >
-                        <a href='https://co.linkedin.com/'><img className='thirteenPageMobile__logoLinkedin' src={logolinkedin}></img></a>  
+                        <a href='https://www.linkedin.com/company/vortex-labcol'><img className='thirteenPageMobile__logoLinkedin' src={logolinkedin}></img></a>  
                     </div>
                     <div className='thirteenPageMobile__gmail'>  
                         <a className='textColorWhite fontSizeOneFive fontWeightLighter' href='https://www.google.com/intl/es-419/gmail/about/'>vortexlabcol@gmail.com</a>
